@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+.navbar.scrolled {
+  background: rgba(253, 246, 237, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 14px 60px;
+  box-shadow: 0 1px 30px rgba(61,43,31,0.08);
+}
+.nav-brand { text-decoration: none; }
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--earth);
+  letter-spacing: -0.5px;
+  display: block;
+}
+.logo span { color: var(--saffron); }
+.logo-devanagari {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--earth);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--saffron); }
+.nav-cta {
+  background: var(--saffron) !important;
+  color: var(--white) !important;
+  padding: 10px 24px;
+  border-radius: 100px;
+  transition: background 0.3s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--deep-saffron) !important; transform: translateY(-1px); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--earth);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar, .navbar.scrolled { padding: 16px 24px; }
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(253,246,237,0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    box-shadow: 0 20px 40px rgba(61,43,31,0.1);
+  }
+  .nav-links.open { display: flex; }
+}

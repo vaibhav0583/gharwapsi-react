@@ -1,0 +1,92 @@
+.host-page {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: #f5efe7;
+}
+
+.host-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.host-heading {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #3d2417;
+}
+
+.host-heading span {
+  color: #e76f1c;
+}
+
+.host-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #e76f1c;
+  transition: 0.3s;
+}
+
+.step-card h2 {
+  margin-bottom: 20px;
+  color: #3d2417;
+}
+
+.step-card input,
+.step-card textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.step-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.next-btn,
+.back-btn,
+.submit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.next-btn,
+.submit-btn {
+  background: #e76f1c;
+  color: white;
+}
+
+.back-btn {
+  background: #ddd;
+}
